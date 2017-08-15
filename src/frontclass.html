@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./fonts/iconfont.css"/>
+    <style>
+        .iconfont {
+            display: inline-block;
+            font-size: 50px;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="iconfont"></div>
+<script>
+    var icons = ['icon-close', 'icon-shoucang1', 'icon-down', 'icon-shoucang', 'icon-gouwuche', 'icon-xiangyou', 'icon-success', 'icon-gou', 'icon-rightarrow', 'icon-plus', 'icon-minus', 'icon-xin', 'icon-down1', 'icon-up', 'icon-yiguanzhu', 'icon-jiaguanzhux', 'icon-yipaiergouwuche', 'icon-zhou', 'icon-yue', 'icon-ri', 'icon-fubiao', 'icon-paimai', 'icon-yipaiergouwuche1', 'icon-tixing', 'icon-kefu', 'icon-shuoming', 'icon-danchuangguanbi', 'icon-chenggong', 'icon-dianzan-xian', 'icon-dianzan', 'icon-fenxiang-xi', 'icon-wuliuweikong', 'icon-pingjiaweikong', 'icon-shangpinweikong', 'icon-gouwucheweikong', 'icon-pingjiaweikong1', 'icon-shouhuodizhiweikong', 'icon-shanchu', 'icon-shoucangweikong', 'icon-wuwangluo', 'icon-youhuiquanweikong', 'icon-dingdanweikong', 'icon-sousuoweikong', 'icon-qingchushuru', 'icon-shouji-zhanghaobangding', 'icon-youxiangdenglu', 'icon-shoujizhanghaodenglu', 'icon-zhuyi', 'icon-zhifubao', 'icon-weixin-zhanghaobangdingicon', 'icon-wangyi-zhanghaobangding', 'icon-weibo-zhanghaobangding', 'icon-QQ-zhanghaobangding'];
+    var t1, t2, t3;
+
+    t1 = performance.now();
+
+    function fn() {
+        var iconfont = document.getElementById('iconfont');
+        var html = '';
+        icons.forEach(function(iclass) {
+            html += `<i class="iconfont ${iclass}"></i>`;
+        });
+        // 2^4 = 16 倍
+        var arr = [0, 1, 2, 3, 4];
+        arr.forEach(function() {
+            html += html;
+        });
+
+        t2 = performance.now();
+
+        // 53 * 16 = 848 个图标
+        iconfont.innerHTML = html;
+
+        t3 = performance.now();
+
+        //alert(~~t1 + ':' + ~~t2 + ':' + ~~t3);
+        //alert('sp1: ' + (t2 - t1));
+        alert('sp2: ' + (t3 - t2));
+        alert('load 1: ' + (t3 - t2) / (53 * Math.pow(2, arr.length - 1)));
+    }
+
+    window.onload = setTimeout(function(){
+        fn();
+    }, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id="sbs"></div>
+<script>
+    var t1, t2, t3;
+
+    t1 = performance.now();
+
+    function fn() {
+
+        var sbs = document.getElementById('sbs');
+        var svg = document.getElementsByTagName('svg')[0];
+        var symbols = svg.getElementsByTagName('symbol');
+        var html = '', id;
+        symbols = [].slice.call(symbols, 0);
+        symbols.forEach(function(sb) {
+            id = sb.getAttribute('id');
+            html += `<svg class="icon" aria-hidden="true">
+                        <use xlink:href="#${id}"></use>
+                    </svg>`;
+        });
+        // 2^4 = 16 倍
+        var arr = [0, 1, 2, 3, 4];
+        arr.forEach(function() {
+            html += html;
+        });
+
+        t2 = performance.now();
+
+        // 53 * 16 = 848 个图标
+        sbs.innerHTML = html;
+
+        t3 = performance.now();
+
+        //alert(~~t1 + ':' + ~~t2 + ':' + ~~t3);
+        //alert('sp1: ' + (t2 - t1));
+        alert('sp2: ' + (t3 - t2));
+        alert('load 1: ' + (t3 - t2) / (53 * Math.pow(2, arr.length - 1)));
+    }
+
+    window.onload = setTimeout(function(){
+        fn();
+    }, 1000);
+</script>
+<!-- 53图标 -->
+<script src="./fonts/iconfont.js" type="text/javascript"></script>
+</body>
+</html>
