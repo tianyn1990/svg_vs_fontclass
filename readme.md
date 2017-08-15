@@ -19,16 +19,16 @@ http://iconfont.cn/help/detail?helptype=code 中的 font-class引用
 ### 性能
 
 1. 移动端，考拉app中
-测试：加载848 个图标，平台：红米note3，性能很差；
-http://localhost:3333/frontclass.html
+测试：加载848 个图标，平台：红米note3，性能很差；  
+[demo](http://localhost:3333/fontclass.html)   
 解析所有图标：28.9ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.034ms
 2. 在chrome浏览器，页面performance分析：
-￼[image](https://note.youdao.com/yws/api/group/13812186/noteresource/353B16A9BD07449EB414641ACC05D2DA/version/26?method=get-resource)
+!￼[image](https://note.youdao.com/yws/api/group/13812186/noteresource/353B16A9BD07449EB414641ACC05D2DA/version/26?method=get-resource)
 
 ### 体积
 
-需要加载iconfont.css（53个图标）：原大小：3k，gzip：1.1k
+需要加载iconfont.css（53个图标）：原大小：3k，gzip：1.1k  
 平均一个图标大小：20b
 
 ### 特点
@@ -40,21 +40,21 @@ http://localhost:3333/frontclass.html
 ## 二、svg方式引入图标：
 
 具体方式参考：
-http://iconfont.cn/help/detail?helptype=code 中的 symbol引用；
+http://iconfont.cn/help/detail?helptype=code 中的 symbol引用；  
 原理参考：http://520ued.com/article/591bc48617c24520590f564b 中的第五种；
 
 ### 性能
-1、移动端，考拉app中
-测试：加载848 个图标，平台：红米note3，性能很差；
-http://localhost:3333/svg.html
+1. 移动端，考拉app中
+测试：加载848 个图标，平台：红米note3，性能很差；  
+[demo](http://localhost:3333/svg.html)   
 解析所有图标：192ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.22ms
-2、在chrome浏览器，页面performance分析：
-￼[image](https://note.youdao.com/yws/api/group/13812186/noteresource/B2099C11F820477A9D2711E301269455/version/27?method=get-resource)
+2. 在chrome浏览器，页面performance分析：
+!￼[image](https://note.youdao.com/yws/api/group/13812186/noteresource/B2099C11F820477A9D2711E301269455/version/27?method=get-resource)
 
 ### 体积
 
-需要加载iconfont.js（53个图标）：原大小：60k，gzip：20.4k
+需要加载iconfont.js（53个图标）：原大小：60k，gzip：20.4k  
 平均一个图标大小：385b
 
 ### 特点
@@ -70,11 +70,11 @@ http://localhost:3333/svg.html
 
 ### 总结
 
-建议在wap工程使用(iconfont.cn)[http://iconfont.cn]中提供的 svg symbol 方式引入图标，替代iconfont的方式。
+建议在移动端工程中使用[iconfont.cn](http://iconfont.cn)中提供的 svg symbol 方式引入图标，替代fontclass的方式。
 
 其他参考资料：
 
-https://www.zhihu.com/question/26865508
-http://520ued.com/article/591bc48617c24520590f564b
-https://isux.tencent.com/why-svg.html
-http://iconfont.cn/help/detail?helptype=code
+https://www.zhihu.com/question/26865508  
+http://520ued.com/article/591bc48617c24520590f564b  
+https://isux.tencent.com/why-svg.html  
+http://iconfont.cn/help/detail?helptype=code  

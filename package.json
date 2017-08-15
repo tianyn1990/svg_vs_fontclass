@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "serve": "opn http://localhost:3333/svg.html && node server.js"
+    "serve": "opn http://localhost:3333/svg.html && opn http://localhost:3333/fontclass.html && node server.js"
   },
   "dependencies": {
     "compression": "^1.7.0",
