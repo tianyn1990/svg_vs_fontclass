@@ -24,7 +24,7 @@ http://iconfont.cn/help/detail?helptype=code 中的 font-class引用
 解析所有图标：28.9ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.034ms
 2. 在chrome浏览器，页面performance分析：
-![image](https://note.youdao.com/yws/api/group/13812186/noteresource/353B16A9BD07449EB414641ACC05D2DA/version/26?method=get-resource)
+![image](http://note.youdao.com/yws/api/group/13812186/noteresource/353B16A9BD07449EB414641ACC05D2DA/version/26?method=get-resource)
 
 ### 体积
 
@@ -50,7 +50,7 @@ http://iconfont.cn/help/detail?helptype=code 中的 symbol引用；
 解析所有图标：192ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.22ms
 2. 在chrome浏览器，页面performance分析：
-![image](https://note.youdao.com/yws/api/group/13812186/noteresource/B2099C11F820477A9D2711E301269455/version/27?method=get-resource)
+![image](http://note.youdao.com/yws/api/group/13812186/noteresource/B2099C11F820477A9D2711E301269455/version/27?method=get-resource)
 
 ### 体积
 
