@@ -20,11 +20,11 @@ http://iconfont.cn/help/detail?helptype=code 中的 font-class引用
 
 1. 移动端，考拉app中
 测试：加载848 个图标，平台：红米note3，性能很差   
-[demo路径](http://localhost:3333/fontclass.html)   
+[demo路径](http://localhost:3333/fontclass.html)   
 解析所有图标：28.9ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.034ms
 2. 在chrome浏览器，页面performance分析：
-![image](http://tianyn1990.github.io/resources/images/svgvsclassfont.jpg)
+![image](https://raw.githubusercontent.com/tianyn1990/tianyn1990.github.io/master/resources/images/svgvsclassfont2.jpg)
 
 ### 体积
 
@@ -46,11 +46,11 @@ http://iconfont.cn/help/detail?helptype=code 中的 symbol引用；
 ### 性能
 1. 移动端，考拉app中
 测试：加载848 个图标，平台：红米note3，性能很差  
-[demo路径](http://localhost:3333/svg.html)   
+[demo路径](http://localhost:3333/svg.html)   
 解析所有图标：192ms（el.innerHTML之前，对比 el.innerHTML之后）
 平均解析一个图标：0.22ms
 2. 在chrome浏览器，页面performance分析：
-![image](http://tianyn1990.github.io/resources/images/svgvsclassfont2.jpg)
+![image](https://raw.githubusercontent.com/tianyn1990/tianyn1990.github.io/master/resources/images/svgvsclassfont3.jpg)
 
 ### 体积
 
